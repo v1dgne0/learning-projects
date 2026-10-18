@@ -79,3 +79,5 @@ const hasEnoughProjects = checkProjects(projectsCount);
 console.log(hasEnoughProjects);
 console.log(goodscores);
 console.log(firstTopScore);
+
+fdsfsdfsd
