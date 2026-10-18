@@ -1,0 +1,64 @@
+body {
+    color: black;
+    background-color: slategray;
+}
+
+h1 {
+    color: wheat;
+    background-color: grey;
+}
+
+.about {
+    color: black;
+    background-color: lightblue;
+    padding: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#about-section {
+    border: 2px solid black;
+}
+
+.cards {
+    color: whitesmoke;
+    background-color: grey;
+    border: 2px solid white;
+    box-sizing: border-box;
+    max-width: 600px;
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: darkgrey;
+    border: 1px solid white;
+    padding: 5px;
+
+    flex-grow: 1;
+}
+
+@media (max-width: 480px) {
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        flex-grow: 0;
+    }
+
+    .about{
+        padding: 12px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
