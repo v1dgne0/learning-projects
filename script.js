@@ -35,19 +35,15 @@ function checkProjects(x) {
     }
 }
 
-responseButton.addEventListener("click", function (event) {
-    if (responses[commandInput.value.trim().toLowerCase()]) {
-        event.preventDefault();
-        commandOutput.textContent = responses[commandInput.value.trim().toLowerCase()];
-    }
-    else{
-        event.preventDefault();
-        commandOutput.textContent = "Не знаю такую команду";
-    }
-});
 
 commandForm.addEventListener("submit", function(event){
     event.preventDefault();
+    if (responses[commandInput.value.trim().toLowerCase()]) {
+        commandOutput.textContent = responses[commandInput.value.trim().toLowerCase()];
+    }
+    else{
+        commandOutput.textContent = "Не знаю такую команду";
+    }
 })
 
 const goodscores = scores.filter(function (score) {
