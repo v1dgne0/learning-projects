@@ -9,7 +9,7 @@ const commandOutput = document.querySelector("#command-response");
 const commandForm = document.querySelector("#command-form");
 
 const mainTitle = document.querySelector("h2");
-const showSkillButtom = document.querySelector("#show-skills-button");
+const showSkillButton = document.querySelector("#show-skills-button");
 
 const clicker = document.querySelector("#clicker");
 const clickerCount = document.querySelector("#clicker-count");
@@ -29,7 +29,7 @@ commandForm.addEventListener("submit", function (event) {
     }
 });
 
-showSkillButtom.addEventListener("click", function () {
+showSkillButton.addEventListener("click", function () {
     mainTitle.textContent = "Мои навыки";
 });
 
