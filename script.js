@@ -4,16 +4,20 @@ const responses = {
     "помощь": "Список комманд..."
 };
 
+//Ответ бота
 const commandInput = document.querySelector("#command-input");
 const commandOutput = document.querySelector("#command-response");
 const commandForm = document.querySelector("#command-form");
 
+//Скилы
 const mainTitle = document.querySelector("h2");
 const showSkillButton = document.querySelector("#show-skills-button");
 
+//Кликер
 const clicker = document.querySelector("#clicker");
 const clickerCount = document.querySelector("#clicker-count");
 
+//Интересы
 const showHidebutton = document.querySelector("#show-hide");
 const myInterests = document.querySelector("#my-interests");
 
@@ -40,7 +44,7 @@ clicker.addEventListener("click", function () {
     clickerCount.textContent = clicks;
 });
 
-showHidebutton.addEventListener("click", function () {
+function toggleInterests(){
     myInterests.hidden = !myInterests.hidden;
 
     if (myInterests.hidden) {
@@ -48,4 +52,6 @@ showHidebutton.addEventListener("click", function () {
     } else {
         showHidebutton.textContent = "Скрыть интересы";
     }
-});
+}
+
+showHidebutton.addEventListener("click", toggleInterests);
