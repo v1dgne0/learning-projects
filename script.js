@@ -10,8 +10,8 @@ console.log(message + age);
 console.log(nextAge);
 
 const responses = {
-    "привет": "привет!",
-    "помощь": "список комманд..." 
+    "привет": "Привет!",
+    "помощь": "Список комманд..." 
 };
 const responseButton = document.querySelector("#response-button");
 const commandInput = document.querySelector("#command-input");
