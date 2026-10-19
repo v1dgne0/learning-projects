@@ -16,6 +16,7 @@ const responses = {
 const responseButton = document.querySelector("#response-button");
 const commandInput = document.querySelector("#command-input");
 const commandOutput = document.querySelector("#command-response");
+const commandForm = document.querySelector("#command-form")
 
 const scores = [80, 69, 45, 35, 89, 92, 65];
 const mainTitle = document.querySelector("h2");
@@ -34,16 +35,20 @@ function checkProjects(x) {
     }
 }
 
-responseButton.addEventListener("click", function () {
+responseButton.addEventListener("click", function (event) {
     if (responses[commandInput.value.trim().toLowerCase()]) {
-        commandOutput.textContent = responses[commandInput.value.trim().toLowerCase()]
+        event.preventDefault();
+        commandOutput.textContent = responses[commandInput.value.trim().toLowerCase()];
     }
     else{
-        commandOutput.textContent = "Не знаю такую команду"
+        event.preventDefault();
+        commandOutput.textContent = "Не знаю такую команду";
     }
 });
 
-
+commandForm.addEventListener("submit", function(event){
+    event.preventDefault();
+})
 
 const goodscores = scores.filter(function (score) {
     return score >= 70;
