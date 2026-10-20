@@ -41,7 +41,7 @@ async function getUser() {
         "https://jsonplaceholder.typicode.com/users/1"
     );
     
-    const user = response.json();
+    const user = await response.json();
 
     console.log(user.email);
 }
