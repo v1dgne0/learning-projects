@@ -35,3 +35,15 @@ const firstTopScore = scores.find(function (score) {
 
 console.log(goodscores);
 console.log(firstTopScore);
+
+async function getUser() {
+    const response = await fetch(
+        "https://jsonplaceholder.typicode.com/users/1"
+    );
+    
+    const user = response.json();
+
+    console.log(user.email);
+}
+
+getUser();

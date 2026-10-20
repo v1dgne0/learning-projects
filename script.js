@@ -44,7 +44,7 @@ clicker.addEventListener("click", function () {
     clickerCount.textContent = clicks;
 });
 
-function toggleInterests(){
+function toggleInterests() {
     myInterests.hidden = !myInterests.hidden;
 
     if (myInterests.hidden) {
@@ -53,5 +53,4 @@ function toggleInterests(){
         showHidebutton.textContent = "Скрыть интересы";
     }
 }
-
 showHidebutton.addEventListener("click", toggleInterests);
