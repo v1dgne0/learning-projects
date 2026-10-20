@@ -37,13 +37,22 @@ console.log(goodscores);
 console.log(firstTopScore);
 
 async function getUser() {
-    const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users/1"
-    );
-    
-    const user = await response.json();
+    try {
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users/1"
+        );
 
-    console.log(user.email);
+        if (!response.ok) {
+            throw new Error("Ошибка запроса");
+        }
+
+
+        const user = await response.json();
+
+        console.log(user.email);
+    } catch {
+        console.log("Ошибка:", error.message);
+    }
 }
 
 getUser();
