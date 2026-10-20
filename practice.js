@@ -39,7 +39,7 @@ console.log(firstTopScore);
 async function getUser() {
     try {
         const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users/1"
+            "https://jsonplaceholder.typicode.com/users/1000"
         );
 
         if (!response.ok) {
@@ -50,7 +50,7 @@ async function getUser() {
         const user = await response.json();
 
         console.log(user.email);
-    } catch {
+    } catch (error) {
         console.log("Ошибка:", error.message);
     }
 }
