@@ -2,15 +2,7 @@ body {
     color: black;
     background-color: slategray;
 }
-#user {
-    width: 200px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: end;
-    flex-wrap: wrap;
-}
 
 #user-place {
     color: aliceblue;
