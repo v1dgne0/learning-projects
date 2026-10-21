@@ -3,7 +3,7 @@ body {
     background-color: slategray;
 }
 
-h1 {
+.hello {
     color: wheat;
     background-color: grey;
     display: flex;
