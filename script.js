@@ -77,7 +77,7 @@ async function getUser() {
         if (response.status == 500) {
             throw new Error("Ошибка сервера");
         }
-        
+
         const user = await response.json();
 
         userName.textContent = user.name;
@@ -92,7 +92,7 @@ async function getUser() {
             userEmail.textContent = "Не удалось подключиться к серверу";
         }
     }
-        getUser();
+getUser();
 
 
 
