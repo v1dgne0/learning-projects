@@ -15,8 +15,8 @@ body {
 #user-place {
     background-color: rgb(60, 58, 63);
     max-width: 200px;
-    padding: 10px;
-    
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #hello{
