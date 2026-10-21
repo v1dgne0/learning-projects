@@ -73,7 +73,7 @@ async function getUser() {
         );
 
         if (!response.ok) {
-            throw new Error("Такого user нет");
+            throw new Error("ERROR");
         }
 
 
@@ -82,7 +82,8 @@ async function getUser() {
         userName.textContent = user.name;
         userEmail.textContent = user.email;
     } catch (error) {
-        console.log("Ошибка:", error.message);
+        userName.textContent = error.message;
+        userEmail.textContent = error.message;
     }
 }
 getUser();
