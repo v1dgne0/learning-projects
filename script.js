@@ -74,7 +74,7 @@ async function getUser() {
             throw new Error("Пользователь не найден");
         }
 
-        if (response.status == 500) {
+        if (!response.ok) {
             throw new Error("Ошибка сервера");
         }
         const user = await response.json();
