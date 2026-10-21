@@ -78,21 +78,22 @@ async function getUser() {
             throw new Error("Ошибка сервера");
         }
 
-        const user = await response.json();
-
-        userName.textContent = user.name;
-        userEmail.textContent = user.email;
-
     } catch (error) {
         if (error.message == "Пользователь не найден" && error.message == "Ошибка сервера") {
             userName.textContent = error.message;
             userEmail.textContent = error.message;
         } else {
-            userName.textContent = "Не удалось подключиться к серверу";
+            userName.textContent = error.message;
             userEmail.textContent = "Не удалось подключиться к серверу";
         }
     }
+}
 getUser();
+
+const user = await response.json();
+
+userName.textContent = user.name;
+userEmail.textContent = user.email;
 
 
 
