@@ -4,7 +4,6 @@ body {
 }
 #user {
     background-color: rgb(60, 58, 63);
-    max-width: 200px;
 
     display: flex;
     flex-direction: row;
@@ -13,6 +12,9 @@ body {
     flex-wrap: wrap;
 }
 
+#user-place {
+    max-width: 200px;
+}
 
 #hello{
     display: flex;
