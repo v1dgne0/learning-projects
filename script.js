@@ -69,7 +69,7 @@ const userEmail = document.querySelector("#user-email");
 async function getUser() {
     try {
         const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users/1"
+            "https://jsonplaceholder.typicode.com/users/10000"
         );
 
         if (!response.ok) {
