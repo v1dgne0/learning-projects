@@ -3,7 +3,7 @@ body {
     background-color: slategray;
 }
 #user {
-    border: 2px solid black;
+    
 
     display: flex;
     flex-direction: row;
@@ -13,6 +13,7 @@ body {
 }
 
 #user-place {
+    border: 2px solid black;
     background-color: rgb(60, 58, 63);
     width: 200px;
     padding: 10px;
