@@ -68,26 +68,31 @@ const userEmail = document.querySelector("#user-email");
 
 async function getUser() {
     try {
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users/1"
-        );
+        const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
 
         if (response.status == 404) {
             throw new Error("Пользователь не найден");
         }
 
+        if (response.status == 500) {
+            throw new Error("Ошибка сервера");
+        }
 
-        const user = await response.json();
-
-        userName.textContent = user.name;
-        userEmail.textContent = user.email;
     } catch (error) {
-        userName.textContent = error.message;
-        userEmail.textContent = error.message;
+        if (error.message == "Пользователь не найден" && error.message == "Ошибка сервера") {
+            userName.textContent = error.message;
+            userEmail.textContent = error.message;
+        } else {
+            userName.textContent = "Не удалось подключиться к серверу";
+            userEmail.textContent = "Не удалось подключиться к серверу";
+        }
     }
-}
-getUser();
+    getUser();
 
+    const user = await response.json();
+
+    userName.textContent = user.name;
+    userEmail.textContent = user.email;
 
 
 
