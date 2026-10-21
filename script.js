@@ -1,25 +1,12 @@
-
+//Ответ бота
 const responses = {
     "привет": "Привет!",
     "помощь": "Список комманд..."
 };
 
-//Ответ бота
 const commandInput = document.querySelector("#command-input");
 const commandOutput = document.querySelector("#command-response");
 const commandForm = document.querySelector("#command-form");
-
-//Скилы
-const mainTitle = document.querySelector("h2");
-const showSkillButton = document.querySelector("#show-skills-button");
-
-//Кликер
-const clicker = document.querySelector("#clicker");
-const clickerCount = document.querySelector("#clicker-count");
-
-//Интересы
-const showHidebutton = document.querySelector("#show-hide");
-const myInterests = document.querySelector("#my-interests");
 
 commandForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -33,9 +20,21 @@ commandForm.addEventListener("submit", function (event) {
     }
 });
 
+
+
+//Скилы
+const mainTitle = document.querySelector("h2");
+const showSkillButton = document.querySelector("#show-skills-button");
+
 showSkillButton.addEventListener("click", function () {
     mainTitle.textContent = "Мои навыки";
 });
+
+
+
+//Кликер
+const clicker = document.querySelector("#clicker");
+const clickerCount = document.querySelector("#clicker-count");
 
 let clicks = 0;
 
@@ -43,6 +42,12 @@ clicker.addEventListener("click", function () {
     clicks += 1;
     clickerCount.textContent = clicks;
 });
+
+
+
+//Интересы
+const showHidebutton = document.querySelector("#show-hide");
+const myInterests = document.querySelector("#my-interests");
 
 function toggleInterests() {
     myInterests.hidden = !myInterests.hidden;
@@ -54,3 +59,17 @@ function toggleInterests() {
     }
 }
 showHidebutton.addEventListener("click", toggleInterests);
+
+
+
+//Данные user
+const userName = document.querySelector("#user-name");
+const userEmail = document.querySelector("#user-email");
+
+
+
+
+
+
+
+
