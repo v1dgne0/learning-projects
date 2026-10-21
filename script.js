@@ -66,7 +66,25 @@ showHidebutton.addEventListener("click", toggleInterests);
 const userName = document.querySelector("#user-name");
 const userEmail = document.querySelector("#user-email");
 
+async function getUser() {
+    try {
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/users/1"
+        );
 
+        if (!response.ok) {
+            throw new Error("Такого user нет");
+        }
+
+
+        const user = await response.json();
+
+        userName.textContent = user.name;
+        userEmail.textContent = user.email;
+    } catch (error) {
+        console.log("Ошибка:", error.message);
+    }
+}
 
 
 
