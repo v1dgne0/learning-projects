@@ -86,7 +86,7 @@ async function getUser() {
             userName.textContent = error.message;
             userEmail.textContent = error.message;
         } else {
-            userName.textContent = error.message;
+            userName.textContent = "Ошибка подключения";
             userEmail.textContent = "Не удалось подключиться к серверу";
         }
     }
