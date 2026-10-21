@@ -85,6 +85,7 @@ async function getUser() {
         console.log("Ошибка:", error.message);
     }
 }
+getUser();
 
 
 
