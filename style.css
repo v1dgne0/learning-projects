@@ -13,6 +13,7 @@ body {
 }
 
 #user-place {
+    color: aliceblue;
     border: 2px solid black;
     background-color: rgb(60, 58, 63);
     width: 200px;
