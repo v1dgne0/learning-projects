@@ -3,7 +3,7 @@ body {
     background-color: slategray;
 }
 #user {
-    
+    border: 2px solid black;
 
     display: flex;
     flex-direction: row;
