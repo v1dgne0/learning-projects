@@ -72,8 +72,8 @@ async function getUser() {
             "https://jsonplaceholder.typicode.com/users/1"
         );
 
-        if (!response.ok) {
-            throw new Error("ERROR");
+        if (response.status == 404) {
+            throw new Error("Пользователь не найден");
         }
 
 
