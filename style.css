@@ -16,7 +16,9 @@ body {
     background-color: rgb(60, 58, 63);
     width: 200px;
     padding: 10px;
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #hello{
