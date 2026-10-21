@@ -11,7 +11,13 @@ body {
     margin-bottom: 50px;
 }
 
+#user {
+    background-color: rgb(60, 58, 63);
 
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 
 h1 {
     color: wheat;
