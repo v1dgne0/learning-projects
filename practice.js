@@ -36,23 +36,3 @@ const firstTopScore = scores.find(function (score) {
 console.log(goodscores);
 console.log(firstTopScore);
 
-async function getUser() {
-    try {
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/users/1"
-        );
-
-        if (!response.ok) {
-            throw new Error("Ошибка запроса");
-        }
-
-
-        const user = await response.json();
-
-        console.log(user.email);
-    } catch (error) {
-        console.log("Ошибка:", error.message);
-    }
-}
-
-getUser();
