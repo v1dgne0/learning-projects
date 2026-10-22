@@ -63,7 +63,7 @@ showHidebutton.addEventListener("click", toggleInterests);
 
 
 //Данные user
-const userName = document.querySelector("#user-name");
+const useName = document.querySelector("#user-name");
 const userEmail = document.querySelector("#user-email");
 
 async function getUser() {
