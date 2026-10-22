@@ -1,14 +1,6 @@
 
 console.log("Привет");
 
-const practiceUserName = "Владислав";
-const projectsCount = 4;
-const age = 19;
-const message = "Мне лет: ";
-const nextAge = age + 1;
-
-console.log(message + age);
-console.log(nextAge);
 
 function checkProjects(x) {
     if (x >= 4) {
