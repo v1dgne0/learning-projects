@@ -1,7 +1,7 @@
 
 console.log("Привет");
 
-const userName = "Владислав";
+const practiceUserName = "Владислав";
 const projectsCount = 4;
 const age = 19;
 const message = "Мне лет: ";
