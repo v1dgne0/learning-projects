@@ -63,7 +63,7 @@ showHidebutton.addEventListener("click", toggleInterests);
 
 
 //Данные user
-const useName = document.querySelector("#user-name");
+const userName = document.querySelector("#user-name");
 const userEmail = document.querySelector("#user-email");
 
 async function getUser() {
@@ -79,7 +79,7 @@ async function getUser() {
         }
         const user = await response.json();
 
-        userName.textContent = user.name;
+        useName.textContent = user.name;
         userEmail.textContent = user.email;
     } catch (error) {
         if (error.message == "Пользователь не найден" || error.message == "Ошибка сервера") {
