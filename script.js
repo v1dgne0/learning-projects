@@ -79,7 +79,7 @@ async function getUser() {
         }
         const user = await response.json();
 
-        useName.textContent = user.name;
+        userName.textContent = user.name;
         userEmail.textContent = user.email;
     } catch (error) {
         if (error.message == "Пользователь не найден" || error.message == "Ошибка сервера") {
